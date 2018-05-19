@@ -1,0 +1,6 @@
+(define (plural wd)
+  (if (equal? (last wd) 'y)
+    (if (equal? (last (bl wd)) 'o)
+      (word wd 's)
+      (word (bl wd) 'ies))
+    (word wd 's)))
