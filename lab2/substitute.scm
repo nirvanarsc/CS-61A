@@ -2,4 +2,4 @@
   (cond ((empty? sentence) '())
         ((if (equal? (first sentence) old)
            (se new (substitute (bf sentence) old new))
-           (se (first sentence) (substitute(bf sentence) old new))))))
+           (se (first sentence) (substitute (bf sentence) old new))))))
