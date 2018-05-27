@@ -1,0 +1,15 @@
+(define (switch sentence)
+  (cond ((empty? sentence) '())
+        ((if (equal? (first sentence) 'you) 
+           (se 'i (switch-helper (bf sentence)))
+           (se (first sentence) (switch-helper (bf sentence)))))))
+
+(define (switch-helper sentence)
+  (if (empty? sentence) '()
+    (cond ((or (equal? (first sentence) 'i)
+               (equal? (first sentence) 'me))
+           (se 'you (switch-helper (bf sentence))))
+          ((equal? (first sentence) 'you)
+           (se 'me (switch-helper (bf sentence))))
+          (else
+            (se (first sentence) (switch-helper (bf sentence)))))))
