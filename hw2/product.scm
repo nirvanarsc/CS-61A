@@ -16,10 +16,8 @@
 (define (fact a b)
   (product identity a inc b))
 
-;we deal with the series as 4*4*6*6.../3*3*5*5...
-;so we need to deal with the leading factor of 2 separately and also need 
-;to divide by the limit the upper coefficient since
-;we are squaring one extra time
+;we deal with the series as 4*4*6*6.../3*3*5*5... so we need to deal with the leading factor of 2 separately and also because of it
+;we need to divide the upper coefficient by the limit since we are squaring one extra time
 (define (sum-pi a)
   (*
     (/
