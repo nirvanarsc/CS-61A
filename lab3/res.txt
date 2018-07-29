@@ -1,0 +1,95 @@
+; (transcript-on res.txt)       Begin transcript on file
+; (trace schemefunction.scm)    Add trace to function
+; (schemefunction)              Execute traced function
+; (transcript-off)              End transcript on file
+
+okay
+STk> (load "cc.scm")
+okay
+STk> (trace cc)
+okay
+STk> (count-change 10)
+.. -> cc with amount = 10,  kinds-of-coins = 5
+.... -> cc with amount = 10,  kinds-of-coins = 4
+...... -> cc with amount = 10,  kinds-of-coins = 3
+........ -> cc with amount = 10,  kinds-of-coins = 2
+.......... -> cc with amount = 10,  kinds-of-coins = 1
+............ -> cc with amount = 10,  kinds-of-coins = 0
+............ <- cc returns 0
+............ -> cc with amount = 9,  kinds-of-coins = 1
+.............. -> cc with amount = 9,  kinds-of-coins = 0
+.............. <- cc returns 0
+.............. -> cc with amount = 8,  kinds-of-coins = 1
+................ -> cc with amount = 8,  kinds-of-coins = 0
+................ <- cc returns 0
+................ -> cc with amount = 7,  kinds-of-coins = 1
+.................. -> cc with amount = 7,  kinds-of-coins = 0
+.................. <- cc returns 0
+.................. -> cc with amount = 6,  kinds-of-coins = 1
+.................... -> cc with amount = 6,  kinds-of-coins = 0
+.................... <- cc returns 0
+.................... -> cc with amount = 5,  kinds-of-coins = 1
+...................... -> cc with amount = 5,  kinds-of-coins = 0
+...................... <- cc returns 0
+...................... -> cc with amount = 4,  kinds-of-coins = 1
+........................ -> cc with amount = 4,  kinds-of-coins = 0
+........................ <- cc returns 0
+........................ -> cc with amount = 3,  kinds-of-coins = 1
+.......................... -> cc with amount = 3,  kinds-of-coins = 0
+.......................... <- cc returns 0
+.......................... -> cc with amount = 2,  kinds-of-coins = 1
+............................ -> cc with amount = 2,  kinds-of-coins = 0
+............................ <- cc returns 0
+............................ -> cc with amount = 1,  kinds-of-coins = 1
+.............................. -> cc with amount = 1,  kinds-of-coins = 0
+.............................. <- cc returns 0
+.............................. -> cc with amount = 0,  kinds-of-coins = 1
+.............................. <- cc returns 1
+............................ <- cc returns 1
+.......................... <- cc returns 1
+........................ <- cc returns 1
+...................... <- cc returns 1
+.................... <- cc returns 1
+.................. <- cc returns 1
+................ <- cc returns 1
+.............. <- cc returns 1
+............ <- cc returns 1
+.......... <- cc returns 1
+.......... -> cc with amount = 5,  kinds-of-coins = 2
+............ -> cc with amount = 5,  kinds-of-coins = 1
+.............. -> cc with amount = 5,  kinds-of-coins = 0
+.............. <- cc returns 0
+.............. -> cc with amount = 4,  kinds-of-coins = 1
+................ -> cc with amount = 4,  kinds-of-coins = 0
+................ <- cc returns 0
+................ -> cc with amount = 3,  kinds-of-coins = 1
+.................. -> cc with amount = 3,  kinds-of-coins = 0
+.................. <- cc returns 0
+.................. -> cc with amount = 2,  kinds-of-coins = 1
+.................... -> cc with amount = 2,  kinds-of-coins = 0
+.................... <- cc returns 0
+.................... -> cc with amount = 1,  kinds-of-coins = 1
+...................... -> cc with amount = 1,  kinds-of-coins = 0
+...................... <- cc returns 0
+...................... -> cc with amount = 0,  kinds-of-coins = 1
+...................... <- cc returns 1
+.................... <- cc returns 1
+.................. <- cc returns 1
+................ <- cc returns 1
+.............. <- cc returns 1
+............ <- cc returns 1
+............ -> cc with amount = 0,  kinds-of-coins = 2
+............ <- cc returns 1
+.......... <- cc returns 2
+........ <- cc returns 3
+........ -> cc with amount = 0,  kinds-of-coins = 3
+........ <- cc returns 1
+...... <- cc returns 4
+...... -> cc with amount = -15,  kinds-of-coins = 4
+...... <- cc returns 0
+.... <- cc returns 4
+.... -> cc with amount = -40,  kinds-of-coins = 5
+.... <- cc returns 0
+.. <- cc returns 4
+4
+STk> (transcript-off)

@@ -1,0 +1,5 @@
+(define (count-change amount sent)
+  (cond ((= amount 0) 1)
+        ((or (< amount 0) (empty? sent)) 0)
+        (else (+ (count-change amount (bf sent))
+                 (count-change (- amount (first sent)) sent)))))
