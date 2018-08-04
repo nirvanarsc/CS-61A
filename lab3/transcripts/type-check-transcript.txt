@@ -1,0 +1,22 @@
+okay
+STk> (load "type-check.scm")
+okay
+STk> (define (square x) (* x x))
+square
+STk> (type-check1 square number? 5)
+25
+STk> (type-check1 square number? 'a)
+#f
+STk> (type-check2 square 5)
+25
+STk> (type-check2 square 'a)
+"Invalid argument"
+STk> ((make-safe1 square number?) 5)
+25
+STk> ((make-safe1 square number?) 'a)
+#f
+STk> ((make-safe2 square) 5)
+25
+STk> ((make-safe2 square) 'a)
+"Invalid argument"
+STk> (transcript-off)

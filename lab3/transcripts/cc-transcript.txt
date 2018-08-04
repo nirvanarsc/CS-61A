@@ -1,4 +1,4 @@
-; (transcript-on res.txt)       Begin transcript on file
+; (transcript-on "res.txt")     Begin transcript on file
 ; (trace schemefunction.scm)    Add trace to function
 ; (schemefunction)              Execute traced function
 ; (transcript-off)              End transcript on file
