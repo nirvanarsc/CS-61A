@@ -5,7 +5,6 @@
       (/ (n i) (+ (d i) (recur (+ 1 i))))))
   (recur 1))
 
-
 (define (cont-frac-golden-ratio k)
   (cont-fact (lambda (i) 1.0) (lambda (i) 1.0) k))
 
