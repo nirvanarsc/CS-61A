@@ -1,0 +1,1 @@
+; product = b ^ (n - counter)
