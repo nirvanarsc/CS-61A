@@ -1,0 +1,20 @@
+okay
+STk> (define x (cons 4 5))
+x
+STk> (define y (cons 'hello 'goodbye))
+y
+STk> (define z (cons x y))
+z
+STk> (cdr (car z))
+5
+STk> (car (cons 8 3))
+8
+STk> (car z)
+(4 . 5)
+STk> (car 3)
+*** Error:
+    car: wrong type of argument: 3
+Current eval stack:
+__________________
+  0    (car 3)
+STk> (transcript-off)
