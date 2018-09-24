@@ -1,0 +1,6 @@
+okay
+STk> (print-rat (make-rational 2 3))
+"2/3"
+STk> (print-rat (*rat (make-rational 2 3) (make-rational 1 4)))
+"2/12"
+STk> (transcript-off)
