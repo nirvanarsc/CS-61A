@@ -1,0 +1,13 @@
+okay
+STk> (load "2.2")
+okay
+STk> (print-point (midpoint-segment (make-segment (make-point 0 0) (make-point 3 2))))
+(1.5, 1)
+okay
+STk> (print-point (midpoint-segment (make-segment (make-point 10 33) (make-point 3 12))))
+(6.5, 22.5)
+okay
+STk> (print-point (midpoint-segment (make-segment (make-point -2 2) (make-point 2 -4))))
+(0, -1)
+okay
+STk> (transcript-off)
