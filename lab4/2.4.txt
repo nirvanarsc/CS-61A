@@ -1,0 +1,8 @@
+okay
+STk> (load "2.4")
+okay
+STk> (my-car (my-cons 2 3))
+2
+STk> (my-cdr (my-cons 2 3))
+3
+STk> (transcript-off)
