@@ -1,0 +1,24 @@
+okay
+STk> (load "2.12")
+okay
+STk> (define i (make-interval-center-percent 10 25))
+i
+STk> (lower-bound i)
+7.5
+STk> (upper-bound i)
+12.5
+STk> (center i)
+10.0
+STk> (percent-tolerance i)
+25.0
+STk> (define y (make-interval-center-percent 3.5 15))
+y
+STk> (lower-bound y)
+2.975
+STk> (upper-bound y)
+4.025
+STk> (center y)
+3.5
+STk> (percent-tolerance y)
+15.0
+STk> (transcript-off)
