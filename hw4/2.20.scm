@@ -1,6 +1,6 @@
 (define (same-parity . items)
   (define (my-filter pred lst)
-    (cond ((null? lst) '())
+    (cond ((null? lst) nil)
           ((pred (car lst))
            (cons (car lst) (my-filter pred (cdr lst))))
           (else (my-filter pred (cdr lst)))))
