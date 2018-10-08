@@ -1,0 +1,5 @@
+(define (substitute lst old new)
+  (map (lambda (x)
+         (if (list? x)
+           (substitute x old new)
+           (if (equal? x old) new x))) lst))
