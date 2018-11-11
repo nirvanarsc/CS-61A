@@ -1,0 +1,12 @@
+(define (cxr-function str)
+  (cxr-function-helper (bf (bl str))))
+
+(define (cxr-function-helper trimmed-str)
+  (if (equal? trimmed-str "")
+    (lambda (x) x)
+    (let ((curr-char (first trimmed-str))
+          (next-trimmed-str (bf trimmed-str)))
+      (cond ((equal? curr-char 'a)
+             (lambda (x) (car ((cxr-function-helper next-trimmed-str) x))))
+            ((equal? curr-char 'd)
+             (lambda (x) (cdr ((cxr-function-helper next-trimmed-str) x))))))))
