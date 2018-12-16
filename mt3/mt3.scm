@@ -28,19 +28,15 @@
 ;prints (h i j)
 
 ;Problem 2
-
 ;B and C
 
 ;Problem 3
-
 ;=> lg.scm
 
 ;Problem 4
-
 ;C
 
 ;Problem 5
-
 ;=> mad-libs.scm
 
 ;Problem 6
