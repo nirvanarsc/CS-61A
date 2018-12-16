@@ -1,0 +1,11 @@
+(define (mad-libs story)
+  (lambda (nouns adjectives)
+    (define (helper story nouns adjs)
+      (cond ((empty? story) '())
+            ((equal? (first story) '*NOUN)
+             (se (first nouns) (helper (bf story) (bf nouns) adjs)))
+            ((equal? (first story) '*ADJECTIVE)
+             (se (first adjs) (helper (bf story) nouns (bf adjs))))
+            (else (se (first story) (helper (bf story) nouns adjs)))))
+    (helper story nouns adjectives)))
+
